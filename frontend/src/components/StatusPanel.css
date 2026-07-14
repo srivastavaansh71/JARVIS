@@ -1,0 +1,85 @@
+.status-panel-container {
+  width: 260px;
+  background: rgba(5, 8, 17, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Sci-fi shape: chamfered bottom-left and top-right corners */
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  padding: 20px;
+  color: #0ff;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15), inset 0 0 15px rgba(0, 255, 255, 0.05);
+  z-index: 100;
+  border-left: 3px solid #0ff;
+}
+
+.status-header {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.status-header::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #0f0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #0f0;
+  animation: pulse-glow-green 2s infinite;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.status-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.status-value {
+  color: #0f0; /* bright green for active status */
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  font-weight: 600;
+}
+
+.status-value.warning {
+  color: #ffaa00;
+  text-shadow: 0 0 5px rgba(255, 170, 0, 0.5);
+}
+
+.status-value.error {
+  color: #ff4444;
+  text-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.status-value.speaking {
+  color: #00ffe1;
+  text-shadow: 0 0 8px rgba(0, 255, 225, 0.6);
+  animation: pulse-glow-green 1s infinite;
+}
+
+@keyframes pulse-glow-green {
+  0% { box-shadow: 0 0 5px #0f0, 0 0 10px #0f0; opacity: 1; }
+  50% { box-shadow: 0 0 2px #0f0, 0 0 5px #0f0; opacity: 0.5; }
+  100% { box-shadow: 0 0 5px #0f0, 0 0 10px #0f0; opacity: 1; }
+}

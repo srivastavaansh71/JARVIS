@@ -1,0 +1,114 @@
+.hud-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Let clicks pass through to blob/terminal */
+  z-index: 5;
+}
+
+.hud-widget {
+  padding: 20px;
+  color: #00ffe1;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 10px rgba(0, 255, 225, 0.5);
+  background: rgba(0, 20, 40, 0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 255, 225, 0.2);
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(0, 255, 225, 0.1);
+  pointer-events: auto; /* Make widgets interactive if needed */
+  transition: all 0.3s ease;
+}
+
+.hud-widget:hover {
+  border-color: rgba(0, 255, 225, 0.5);
+  box-shadow: inset 0 0 30px rgba(0, 255, 225, 0.2), 0 0 15px rgba(0, 255, 225, 0.3);
+}
+
+.hud-title {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #0084ff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 132, 255, 0.5);
+  padding-bottom: 4px;
+}
+
+.hud-top-left {
+  min-width: 220px;
+}
+
+.hud-clock {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+.hud-date {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(0, 255, 225, 0.8);
+}
+
+.hud-top-right {
+  min-width: 240px;
+  text-align: right;
+}
+
+.hud-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.hud-info-row.sub-row {
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.hud-info-row.mt-2 {
+  margin-top: 15px;
+}
+
+.hud-label {
+  color: rgba(0, 255, 225, 0.6);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.hud-value {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sub-text {
+  font-size: 11px;
+  color: rgba(0, 255, 225, 0.5);
+  font-weight: normal;
+}
+
+.hud-bottom-left {
+  min-width: 200px;
+}
+
+.text-green { color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.5); }
+.text-cyan { color: #00ffe1; }
+
+.hud-decor-line {
+  height: 2px;
+  width: 50%;
+  background: linear-gradient(90deg, rgba(0,255,225,0.8) 0%, rgba(0,255,225,0) 100%);
+  margin-top: 15px;
+}
+
+.hud-decor-line.right {
+  width: 100%;
+  background: linear-gradient(270deg, rgba(0,255,225,0.8) 0%, rgba(0,255,225,0) 100%);
+  margin-left: auto;
+}

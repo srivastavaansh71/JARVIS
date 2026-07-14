@@ -1,0 +1,2 @@
+# JARVIS
+J.A.R.V.I.S. AI Assistant is a full-stack AI-powered virtual assistant inspired by the futuristic J.A.R.V.I.S. interface. Built with React.js for the frontend and Node.js/Express.js for the backend, the application enables users to interact with an AI assistant through a modern terminal-style interface.  The frontend features an immersive dashboard with animated UI components, real-time status panels, and interactive visual effects, while the backend integrates the Groq AI API to generate intelligent and context-aware responses.

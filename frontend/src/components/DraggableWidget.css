@@ -1,0 +1,65 @@
+.draggable-widget-container {
+  position: fixed;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.draggable-widget-container.movable {
+  outline: 2px dashed rgba(0, 240, 255, 0.8);
+  outline-offset: 4px;
+  cursor: grab;
+  z-index: 1000;
+  background-color: rgba(0, 240, 255, 0.05);
+}
+
+.draggable-widget-container.movable:active {
+  cursor: grabbing;
+}
+
+.movable-overlay {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #00f0ff;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  pointer-events: none;
+}
+
+/* Custom Context Menu */
+.custom-context-menu {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(10, 20, 40, 0.9);
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.custom-context-menu button {
+  background: transparent;
+  color: #00f0ff;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-context-menu button:hover {
+  background: rgba(0, 240, 255, 0.2);
+  color: #fff;
+}
